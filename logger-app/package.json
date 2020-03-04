@@ -1,0 +1,16 @@
+{
+  "name": "logger-app",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Jude Niroshan",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/run.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "grpc": "^1.24.2",
+    "uuid": "^7.0.1",
+    "bunyan": "^1.0.0"
+  }
+}
