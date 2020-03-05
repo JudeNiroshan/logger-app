@@ -1,5 +1,6 @@
 #  logger-app 📠
-----
+
+[![Build Status](https://travis-ci.org/JudeNiroshan/logger-app.svg?branch=master)](https://travis-ci.org/JudeNiroshan/logger-app)
 
 This is a standalone NodeJS application which acts as a gRPC server. gRPC is a modern open source high performance RPC framework that can run in any environment. It can efficiently connect services in and across data centers with pluggable support for load balancing, tracing, health checking and authentication.
 
