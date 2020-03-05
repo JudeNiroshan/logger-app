@@ -28,12 +28,11 @@ describe('Event handler (IT)', () => {
       event: 'something',
     };
     const resp = await handleEvent(mockEvent);
-    fs.readdir(directory, async (err, files) => {
-      for (const file of files) {
-        const line = await firstline(`${directory}/${file}`);
-        expect(line).toContain(mockEvent.event);
-      }
-    });
+    const files = await fs.promises.readdir(directory);
+    for (const file of files) {
+      const line = await firstline(`${directory}/${file}`);
+      expect(line).toContain(mockEvent.event);
+    }
 
     expect(resp).toBeDefined();
     expect(resp.status).toEqual('Success');
@@ -42,9 +41,8 @@ describe('Event handler (IT)', () => {
   it('should return Error when event is empty', async () => {
     const mockEvent = {};
     const resp = await handleEvent(mockEvent);
-    fs.readdir(directory, async (err, files) => {
-      expect(files.length).toBe(0);
-    });
+    const files = await fs.promises.readdir(directory);
+    expect(files.length).toBe(0);
 
     expect(resp).toBeDefined();
     expect(resp.status).toEqual('Error');
@@ -52,16 +50,11 @@ describe('Event handler (IT)', () => {
     expect(resp.reason).toEqual('Empty event');
   });
 
-  function clearLogsDir() {
-    fs.readdir(directory, (err, files) => {
-      if (err) throw err;
-
-      for (const file of files) {
-        fs.unlink(path.join(directory, file), (err) => {
-          if (err) throw err;
-        });
-      }
-    });
+  async function clearLogsDir() {
+    const files = await fs.promises.readdir(directory);
+    for (const file of files) {
+      await fs.promises.unlink(path.join(directory, file));
+    }
   }
 });
 
