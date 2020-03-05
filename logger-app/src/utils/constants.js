@@ -1,3 +1,3 @@
 module.exports = {
-    LOGS_DIRECTORY: 'logs'
-  }
+  LOGS_DIRECTORY: 'logs',
+};
