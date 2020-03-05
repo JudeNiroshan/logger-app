@@ -7,6 +7,12 @@ const handleEvent = require('../../../src/event/event-handler');
 const directory = 'logs';
 
 describe('Event handler (IT)', () => {
+  before(() => {
+    if (!fs.existsSync(directory)) {
+      fs.mkdirSync(directory);
+    }
+  });
+
   beforeEach(() => {
     clearLogsDir();
   });
