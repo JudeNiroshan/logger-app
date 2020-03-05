@@ -13,12 +13,12 @@ describe('Event handler (IT)', () => {
     }
   });
 
-  beforeEach(() => {
-    clearLogsDir();
+  beforeEach(async () => {
+    await clearLogsDir();
   });
 
-  afterEach(() => {
-    clearLogsDir();
+  afterEach(async () => {
+    await clearLogsDir();
   });
 
   it('should return success when event has logged in the file', async () => {
