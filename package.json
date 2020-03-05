@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/run.js",
-    "lint":"node_modules/.bin/eslint src",
+    "lint": "node_modules/.bin/eslint src",
     "lint-fix": "node_modules/.bin/eslint --fix src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
