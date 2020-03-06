@@ -1,4 +1,4 @@
-#  logger-app 📠
+#logger-app 📠
 
 [![Build Status](https://travis-ci.org/JudeNiroshan/logger-app.svg?branch=master)](https://travis-ci.org/JudeNiroshan/logger-app)
 
