@@ -9,28 +9,27 @@
     "lint": "node_modules/.bin/eslint src spec",
     "lint-fix": "node_modules/.bin/eslint --fix src spec",
     "test": "nyc --reporter=lcov mocha --recursive \"./spec/**/*.spec.js\"",
-    "coverage": "codecov"
+    "coverage": "codecov --disable=gcov"
   },
   "pre-commit": [
     "lint"
   ],
   "dependencies": {
     "bunyan": "^1.0.0",
-
     "grpc": "^1.24.2",
     "os": "^0.1.1",
     "uuid": "^7.0.1"
   },
   "devDependencies": {
+    "codecov": "^3.6.5",
     "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
     "expect": "^25.1.0",
-    "remark-stringify": "^7.0.4",
-    "codecov": "^3.6.5",
+    "firstline": "^2.0.2",
+    "lodash": "^4.17.15",
     "mocha": "^7.0.1",
     "nyc": "^15.0.0",
     "pre-commit": "^1.2.2",
-    "lodash": "^4.17.15",
-    "firstline": "^2.0.2"
+    "remark-stringify": "^7.0.4"
   }
 }
