@@ -9,7 +9,7 @@
     "lint": "node_modules/.bin/eslint src spec",
     "lint-fix": "node_modules/.bin/eslint --fix src spec",
     "test": "nyc --reporter=lcov mocha --recursive \"./spec/**/*.spec.js\"",
-    "coverage": "codecov --disable=gcov"
+    "coverage": "codecov --disable=gcv"
   },
   "pre-commit": [
     "lint"
