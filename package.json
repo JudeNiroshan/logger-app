@@ -8,8 +8,7 @@
     "start": "node src/run.js",
     "lint": "node_modules/.bin/eslint src spec",
     "lint-fix": "node_modules/.bin/eslint --fix src spec",
-    "report-coverage": "nyc report --reporter=text-lcov --recursive \"./spec/**/*.spec.js\" > coverage.lcov && codecov",
-    "coverage": "codecov --disable=gcov"
+    "coverage": "nyc report --reporter=text-lcov --recursive \"./spec/**/*.spec.js\" && codecov --disable=gcov"
   },
   "pre-commit": [
     "lint"
