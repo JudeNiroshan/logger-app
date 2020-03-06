@@ -2,4 +2,5 @@ language: node_js
 node_js:
   - '13.9'
 script:
-  - npm test
+  - npm install
+after_success: npm run coverage
