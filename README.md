@@ -1,7 +1,8 @@
 #  logger-app 📠
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/836e6501e7954e58b4b4672ea4d0192f)](https://app.codacy.com/manual/JudeNiroshan/logger-app?utm_source=github.com&utm_medium=referral&utm_content=JudeNiroshan/logger-app&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/JudeNiroshan/logger-app.svg?branch=master)](https://travis-ci.org/JudeNiroshan/logger-app)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/836e6501e7954e58b4b4672ea4d0192f)](https://app.codacy.com/manual/JudeNiroshan/logger-app?utm_source=github.com&utm_medium=referral&utm_content=JudeNiroshan/logger-app&utm_campaign=Badge_Grade_Dashboard)
+[![codecov](https://codecov.io/gh/JudeNiroshan/logger-app/branch/master/graph/badge.svg)](https://codecov.io/gh/JudeNiroshan/logger-app)
 
 This is a standalone NodeJS application which acts as a gRPC server. gRPC is a modern open source high performance RPC framework that can run in any environment. It can efficiently connect services in and across data centers with pluggable support for load balancing, tracing, health checking and authentication.
 
