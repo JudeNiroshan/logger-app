@@ -1,6 +1,7 @@
 const _ = require('lodash');
 const logger = require('../utils/logger').getLogger();
-const writeToLogFile = require('../utils/fs-utils');
+const EventManagerFactory = require('./event-manager-factory');
+const config = require('../config');
 
 async function handleEvent(event) {
   if (_.isEmpty(event)) {
@@ -8,7 +9,8 @@ async function handleEvent(event) {
   }
   logger.info(`received event:: ${JSON.stringify(event)}`);
   try {
-    const logged = await writeToLogFile(event);
+    const eventManager = EventManagerFactory.getManager(config.persist.type);
+    const logged = await eventManager.processEvent(event);
     if (logged) {
       return _successfulResponse();
     }
