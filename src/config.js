@@ -1,4 +1,5 @@
 const config = {};
+
 config.loggerapp = {
   hostName: 'localhost',
   ip: '127.0.0.1',

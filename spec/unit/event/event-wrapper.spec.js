@@ -1,7 +1,7 @@
 const expect = require('expect');
 const os = require('os');
-const packageJson = require('../../package');
-const decorateEventData = require('../../src/event/event-wrapper');
+const packageJson = require('../../../package');
+const decorateEventData = require('../../../src/event/event-wrapper');
 
 describe('event-wrapper ', () => {
   it('should decorate event object with informative data', function() {
