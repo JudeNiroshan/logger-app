@@ -1,5 +1,7 @@
 const grpc = require('grpc');
-const eventsProto = grpc.load('src/protos/events.proto');
+const protoLoader = require('@grpc/proto-loader');
+const packageDefinition = protoLoader.loadSync('src/protos/events.proto');
+const eventsProto = grpc.loadPackageDefinition(packageDefinition);
 const handleEvent = require('./event/event-handler');
 const EurekaClient = require('./register-app');
 const appConfig = require('./config');
@@ -15,6 +17,6 @@ grpcServer.bind(`${appConfig.loggerapp.hostName}:${appConfig.loggerapp.port}`,
     grpc.ServerCredentials.createInsecure());
 
 console.log('Server running at ' +
-`${appConfig.loggerapp.ip}:${appConfig.loggerapp.port}`);
+  `${appConfig.loggerapp.ip}:${appConfig.loggerapp.port}`);
 grpcServer.start();
 EurekaClient.start();

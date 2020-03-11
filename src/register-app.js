@@ -16,8 +16,6 @@ healthEndpoint.createServer(function(req, res) {
 });
 
 const EurekaClient = new Eureka({
-  // application instance information
-
   instance: {
     instanceId: uniqueId,
     app: 'logger-app',
@@ -31,7 +29,7 @@ const EurekaClient = new Eureka({
     vipAddress: 'logger-app.com',
     dataCenterInfo: {
       '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
-      'name': 'GCP',
+      'name': 'MyOwn',
     },
   },
   eureka: {
