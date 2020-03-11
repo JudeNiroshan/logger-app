@@ -1,8 +1,19 @@
 const Eureka = require('eureka-js-client').Eureka;
 const appConfig = require('./config');
-const uniqueIdGen = require('node-machine-id');
+const uuid = require('uuid');
+const healthEndpoint = require('http');
+const healthReponse = require('./resources/health');
 
-const uniqueId = uniqueIdGen.machineIdSync() || 123;
+const uniqueId = uuid.v4() || 123;
+
+
+healthEndpoint.createServer(function(req, res) {
+  res.setHeader('Content-Type', 'application/json');
+  res.write(JSON.stringify(healthReponse));
+  res.end();
+}).listen(appConfig.loggerapp.httpPort, function() {
+  console.log(`server health endpoint port: ${appConfig.loggerapp.httpPort}`);
+});
 
 const EurekaClient = new Eureka({
   // application instance information
@@ -16,10 +27,11 @@ const EurekaClient = new Eureka({
       '$': appConfig.loggerapp.port,
       '@enabled': true,
     },
+    healthCheckUrl: `http://${appConfig.loggerapp.hostName}:${appConfig.loggerapp.httpPort}`,
     vipAddress: 'logger-app.com',
     dataCenterInfo: {
       '@class': 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
-      'name': 'MyOwn',
+      'name': 'GCP',
     },
   },
   eureka: {

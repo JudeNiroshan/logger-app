@@ -4,6 +4,7 @@ config.loggerapp = {
   hostName: 'localhost',
   ip: '127.0.0.1',
   port: 50051,
+  httpPort: 3001,
 };
 config.persist = {
   type: 'file',
