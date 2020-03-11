@@ -1,6 +1,6 @@
 #  logger-app 📠
 
-[![Build Status](https://img.shields.io/travis/jupyterhub/jupyterhub/master?logo=travis)](https://travis-ci.org/JudeNiroshan/logger-app)
+[![Build Status](https://travis-ci.org/JudeNiroshan/logger-app.svg?branch=master)](https://travis-ci.org/JudeNiroshan/logger-app)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/836e6501e7954e58b4b4672ea4d0192f)](https://app.codacy.com/manual/JudeNiroshan/logger-app?utm_source=github.com&utm_medium=referral&utm_content=JudeNiroshan/logger-app&utm_campaign=Badge_Grade_Dashboard)
 [![codecov](https://codecov.io/gh/JudeNiroshan/logger-app/branch/master/graph/badge.svg)](https://codecov.io/gh/JudeNiroshan/logger-app)
 [![Known Vulnerabilities](https://snyk.io/test/github/JudeNiroshan/logger-app/badge.svg?targetFile=package.json)](https://snyk.io/test/github/JudeNiroshan/logger-app?targetFile=package.json)
