@@ -33,6 +33,6 @@
     "mocha": "^8.0.1",
     "nyc": "^15.0.0",
     "pre-commit": "^1.2.2",
-    "remark-stringify": "^8.0.0"
+    "remark-stringify": "^9.0.0"
   }
 }
