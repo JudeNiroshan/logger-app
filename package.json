@@ -27,7 +27,7 @@
     "codecov": "^3.6.5",
     "eslint": "^7.0.0",
     "eslint-config-google": "^0.14.0",
-    "expect": "^26.0.0",
+    "expect": "^27.0.1",
     "firstline": "^2.0.2",
     "lodash": "^4.17.15",
     "mocha": "^8.0.1",
